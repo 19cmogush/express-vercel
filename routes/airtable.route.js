@@ -1,3 +1,4 @@
+const { SuccessResponseObject } = require('../common/http');
 const { Router } = require('express');
 
 const r = Router()
