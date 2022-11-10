@@ -1,14 +1,10 @@
 const { SuccessResponseObject } = require('../common/http');
 const { Router } = require('express');
-
-
-import Airtable, { Base } from "airtable";
-
+import * as userController from "../controllers/user";
 
 const r = Router()
 
-r.post('/', (req, res) => {
-  res.send("Success?")
-}
+r.post("/", userController.sendToAirtable);
+
 
 module.exports = r;
